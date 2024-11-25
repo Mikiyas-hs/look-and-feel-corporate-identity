@@ -76,22 +76,23 @@ header{
     height: 65vh;
     justify-content: center;
 }
+
 @media (min-width: 45em) {
     header {
-        height: 3.75em; /* Zelfde hoogte voor tablets en grotere schermen */
+        height: 3.75em;
     }
 
     .logo {
         left: 50%;
-        transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50) translateY(-50);
     }
 
     .menu-button {
-        left: 2em; /* Menu button blijft dezelfde plaatsing behouden */
+        left: 2em;
     }
 
     .hoofdpagina {
-        height: 65vh; /* Achtergrond blijft dezelfde hoogte behouden */
+        height: 65vh;
     }
 
     .hoofdtekst {
@@ -99,26 +100,26 @@ header{
         justify-content: center;
         height: 50vh;
         top: 250px;
-        /* width: px; */
     }
 }
 
+
 @media (min-width: 64em) {
-    header {
-        height: 3.75em; /* Zelfde hoogte voor desktop */
+    header{
+        height: 3.75em;
     }
 
     .logo {
-        left: 50%; /* Blijft gecentreerd */
-        transform: translateX(-50%) translateY(-50%);
+        left: 50%;
+        transform: translateX(-50) translateY(-50%);
     }
 
     .menu-button {
-        left: 2.5em; /* Menu button blijft hetzelfde */
+        left: 2.5em;
     }
 
     .hoofdpagina {
-        height: 85vh; /* Achtergrond blijft dezelfde hoogte behouden */
+        height: 85vh;
     }
 
     .hoofdtekst {
@@ -128,3 +129,29 @@ header{
         width: 90vh;
     }
 }
+
+
+/* @media (min-width: 64em) {
+    header {
+        height: 3.75em; 
+    }
+
+    .logo {
+        left: 50%; 
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .menu-button {
+        left: 2.5em; 
+    }
+
+    .hoofdpagina {
+        height: 85vh; 
+
+    .hoofdtekst {
+        left: 1em;
+        justify-content: center;
+        height: 30vh;
+        width: 90vh;
+    }
+} */
