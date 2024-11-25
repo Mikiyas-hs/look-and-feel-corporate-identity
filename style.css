@@ -131,27 +131,3 @@ header{
 }
 
 
-/* @media (min-width: 64em) {
-    header {
-        height: 3.75em; 
-    }
-
-    .logo {
-        left: 50%; 
-        transform: translateX(-50%) translateY(-50%);
-    }
-
-    .menu-button {
-        left: 2.5em; 
-    }
-
-    .hoofdpagina {
-        height: 85vh; 
-
-    .hoofdtekst {
-        left: 1em;
-        justify-content: center;
-        height: 30vh;
-        width: 90vh;
-    }
-} */
