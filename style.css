@@ -169,6 +169,21 @@ body {
     background: #333; /* Actieve knop een donkere kleur */
 }
 
+/* Basis styling voor de slide-article */
+.slide-article {
+    max-width: 100%; /* Beperk de breedte tot 100% van de container */
+    height: auto; /* Zorg ervoor dat de hoogte automatisch wordt geschaald */
+    margin: 0 auto; /* Centreer de afbeelding */
+}
+
+/* Specifieke media-query voor grotere schermformaten */
+@media (min-width: 1600px) {
+    .slide-article {
+        max-width: 80%; /* Beperk de breedte van de afbeelding op brede schermen */
+        margin: 0 auto; /* Centreer de afbeelding horizontaal */
+    }
+}
+
 
 /* Responsive styling */
 @media (max-width: 768px) {
@@ -182,7 +197,7 @@ body {
     .artikelen {
         grid-template-columns: repeat(3, 1fr); /* Drie kolommen op grote schermen */
         gap: 2em; /* Meer ruimte tussen artikelen */
-        max-width: 80%;
+        max-width: 100%;
     }
 }
 /* Responsive styling */
@@ -340,7 +355,7 @@ figure.slide-article img {
 }
 
 /* Media queries voor laptops */
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1940px) {
     figure.slide-article {
         max-width: 30%; /* Maak de breedte compacter op laptops */
     }
@@ -406,12 +421,28 @@ figcaption {
 }
 
 .donatie svg {
-    width: 100%; /* De SVG neemt de volledige breedte van de website */
-    height: auto; /* Zorgt dat de hoogte proportioneel blijft */
-    display: block; /* Verwijdert onnodige witruimte onder inline SVG */
-    margin: 0; /* Verwijder standaardmarges */
-    padding: 0; /* Verwijder eventuele padding */
+    width: 100%; /* SVG vult standaard de container */
+    height: auto; /* Behoudt de aspectratio */
+    display: block; /* Voorkomt witruimte */
+    margin: 0 auto; /* Centreert de SVG */
+    min-width: 300px; /* Minimale breedte voor mobiele apparaten */
 }
+
+/* Aanpassingen voor tablets en grotere schermen */
+@media (min-width: 768px) {
+    .donatie svg {
+        max-width: 900px; /* Beperkt de breedte op tablets */
+        margin: 0 auto; /* Centreert de SVG */
+    }
+}
+
+@media (min-width: 1200px) {
+    .donatie svg {
+        max-width: 300px; /* Beperkt de breedte op grote desktops */
+        margin: 0 auto; /* Zorgt dat het gecentreerd blijft */
+    }
+}
+
 
 
 /* Algemene styling voor de schrijvers-sectie */
