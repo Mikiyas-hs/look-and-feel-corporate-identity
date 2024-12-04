@@ -1,6 +1,3 @@
-/* Algemene instellingen */
-
-
 
 body {
     margin: 0;
@@ -8,27 +5,47 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     display: grid;
-    grid-template-rows: auto 1fr auto; /* Header, content, footer */
-    min-height: 100vh; /* Zorgt dat de body altijd de volledige hoogte van het scherm vult */
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh; 
+
+    @media (max-width: 768px) {
+        font-size: 0.9rem;
+    }
 }
 
 /* Hero sectie */
 .hero {
     position: relative;
-    background-image: url('Assets/hoofdpagina image.png'); /* Achtergrondafbeelding */
+    background-image: url('Assets/hoofdpagina image.png'); 
     background-size: cover;
     background-position: center;
     display: grid;
-    grid-template-rows: auto auto auto; /* Menu, logo, hoofdtekst */
+    grid-template-rows: auto auto auto; 
     align-items: center;
     justify-items: center;
-    height: 70vh; /* Hoogte van de hero sectie */
+    height: 70vh; 
+
+    @media (max-width: 768px) {
+        height: 60vh; 
+    }
+
+    @media (min-width: 1024px) {
+        height: 80vh; 
+    }
 }
 
 /* Logo */
 .logo {
-    grid-row: 2; /* Plaats het logo op de tweede rij */
+    grid-row: 2; 
     margin-bottom: 15em;
+
+    @media (max-width: 768px) {
+        width: 120px;
+    }
+
+    @media (min-width: 1024px) {
+        width: 150px;
+    }
 }
 
 /* Menu Button */
@@ -41,6 +58,11 @@ body {
     justify-content: space-between;
     width: 2rem;
     height: 1.5rem;
+
+    @media (max-width: 768px) {
+        width: 1.5rem;
+        height: 1.2rem;
+    }
 }
 
 .menu-button span {
@@ -52,19 +74,37 @@ body {
 
 /* Hoofdtekst */
 .hoofdtekst {
-    grid-row: 3; /* Plaats de hoofdtekst op de derde rij */
+    grid-row: 3; 
     text-align: center;
     font-size: 2.5rem;
     color: white;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+
+    @media (max-width: 768px) {
+        font-size: 1.8rem;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: 3rem;
+    }
 }
 
 /* Artikelen-sectie */
-/* Artikelen sectie */
 .artikelen {
     text-align: left;
     padding: 2em;
     position: relative;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 1em; 
+    }
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 2em; 
+        max-width: 100%;
+    }
 }
 
 /* Header met titel en actiebutton */
@@ -76,9 +116,13 @@ body {
     padding-bottom: 0.5em;
     margin-left: -1.5em;
     gap: 1em;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
-/* Titel tekst */
 .action-header h2 {
     font-size: 2rem;
     border-bottom: 1.5px solid #000;
@@ -88,10 +132,15 @@ body {
     color: #000;
     line-height: 1.4;
     display: inline-block;
+
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+    }
 }
 
+/* Button */
 .button {
-    background-color: #FF6F50; /* Oranje-achtige kleur */
+    background-color: #FF6F50; 
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -103,57 +152,38 @@ body {
     font-size: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.2s ease;
-}
 
-/* Hover-effect op de button */
-.action-header .button:hover {
-    background-color: #e65a3f;
-    transform: scale(1.1);
-}
-
-/* Verberg visueel irrelevante teksten */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+    @media (max-width: 768px) {
+        width: 35px;
+        height: 35px;
+    }
 }
 
 /* Individuele artikelen */
-
-
-/* Artikel titel */
-
-
-/* Artikel afbeeldingen */
 .artikelen img {
-    width: 100%; /* Zorg dat afbeeldingen netjes schalen */
-    height: auto; /* Behoudt de aspect ratio */
+    width: 100%; 
+    height: auto; 
     border-radius: 5px;
     margin-bottom: 1em;
-}
 
-/* Artikel onderschrift */
-.artikelen figcaption {
-    font-size: 0.9rem;
-    color: #666;
-    text-align: center;
+    @media (max-width: 768px) {
+        border-radius: 3px;
+    }
 }
 
 /* Pagination */
 .pagination {
-    display: flex; /* Zet de knoppen op een rij */
-    justify-content: center; /* Centreer de knoppen horizontaal */
-    align-items: center; /* Centreer de knoppen verticaal */
-    gap: 0.5em; /* Ruimte tussen de knoppen */
-    margin-top: 1em; /* Ruimte boven de navigatie */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 0.5em; 
+    margin-top: 1em; 
+
+    @media (max-width: 768px) {
+        gap: 0.3em; 
+    }
 }
 
-/* Knoppen binnen pagination */
 .pagination button {
     width: 10px;
     height: 10px;
@@ -162,98 +192,46 @@ body {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+
+    @media (max-width: 768px) {
+        width: 8px;
+        height: 8px; 
+    }
 }
 
-/* Actieve knop */
 .pagination .dot.active {
-    background: #333; /* Actieve knop een donkere kleur */
+    background: #333; 
 }
 
 /* Basis styling voor de slide-article */
 .slide-article {
-    max-width: 100%; /* Beperk de breedte tot 100% van de container */
-    height: auto; /* Zorg ervoor dat de hoogte automatisch wordt geschaald */
-    margin: 0 auto; /* Centreer de afbeelding */
-}
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto; 
 
-/* Specifieke media-query voor grotere schermformaten */
-@media (min-width: 1600px) {
-    .slide-article {
-        max-width: 80%; /* Beperk de breedte van de afbeelding op brede schermen */
-        margin: 0 auto; /* Centreer de afbeelding horizontaal */
+    @media (min-width: 1600px) {
+        max-width: 80%;
+    }
+
+    @media (max-width: 768px) {
+        max-width: 90%;
+        gap: 0.3rem;
     }
 }
 
-
-/* Responsive styling */
-@media (max-width: 768px) {
-    .artikelen {
-        grid-template-columns: 1fr; /* Eén kolom op kleinere schermen */
-        gap: 1em; /* Kleinere ruimte tussen artikelen */
-    }
-}
-
-@media (min-width: 1024px) {
-    .artikelen {
-        grid-template-columns: repeat(3, 1fr); /* Drie kolommen op grote schermen */
-        gap: 2em; /* Meer ruimte tussen artikelen */
-        max-width: 100%;
-    }
-}
-/* Responsive styling */
-@media (max-width: 768px) {
-    .hero {
-        height: 60vh; /* Kleinere hoogte op mobiel */
-    }
-
-    .hoofdtekst {
-        font-size: 1.8rem;
-    }
-
-    .logo {
-        width: 120px;
-    }
-
-    .menu-button {
-        width: 1.5rem;
-        height: 1.2rem;
-    }
-
-    .artikelen {
-        grid-template-columns: 1fr; /* Eén kolom op kleinere schermen */
-    }
-}
-
-@media (min-width: 1024px) {
-    .hero {
-        height: 80vh; /* Grotere hoogte op desktop */
-    }
-
-    .hoofdtekst {
-        font-size: 3rem;
-    }
-
-    .logo {
-        width: 150px;
-    }
-
-    .artikelen {
-        grid-template-columns: repeat(3, 1fr); /* Drie kolommen op grote schermen */
-    }
-}
 
 /* Algemene instellingen voor de nav-bar */
 nav.alles {
-    background-color: #000000; /* Achtergrondkleur zwart */
-    padding: 0.5rem 0; /* Ruimte boven en onder de tekst */
+    background-color: #000000; 
+    padding: 0.5rem 0; 
     display: flex;
-    justify-content: center; /* Centreer de navigatie */
+    justify-content: center;
 }
 
 nav.alles ul {
-    list-style: none; /* Verwijder standaard lijststijl */
+    list-style: none; 
     display: flex;
-    gap: 2rem; /* Ruimte tussen de links */
+    gap: 2rem; 
     margin: 0;
     padding: 0;
 }
@@ -263,31 +241,30 @@ nav.alles ul li {
 }
 
 nav.alles ul li a {
-    text-decoration: none; /* Verwijder onderstreping van links */
-    color: white; /* Witte tekstkleur */
-    font-size: 1rem; /* Standaard lettergrootte */
+    text-decoration: none; 
+    color: white; 
+    font-size: 1rem; 
     font-weight: normal;
     font-family: Arial, sans-serif;
-    transition: color 0.3s ease; /* Voor een subtiele hover-anime */
+    transition: color 0.3s ease; 
 }
 
 nav.alles ul li a:hover {
-    color: gray; /* Grijze kleur bij hover */
+    color: gray; 
 }
-
 
 /* Algemene styling voor de sectie */
 .artikel-sectie {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Twee kolommen */
-    gap: 2rem; /* Ruimte tussen kolommen */
-    padding: 2rem; /* Binnenruimte rondom */
-    background-image: url('Assets/background.svg'); /* Pad naar je SVG-bestand */
-    background-repeat: no-repeat; /* Herhaal de afbeelding niet */
-    background-position: center; /* Plaats het gecentreerd */
-    background-size: cover; /* Zorg dat het de hele sectie bedekt */
-    position: relative; /* Zorg dat de achtergrond binnen deze sectie blijft */
-    z-index: 0; /* Achtergrondlaag */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2rem; 
+    padding: 2rem; 
+    background-image: url('Assets/background.svg'); 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover;
+    position: relative; 
+    z-index: 0; 
 }
 
 /* Individuele artikelen */
@@ -298,11 +275,11 @@ nav.alles ul li a:hover {
     border-bottom: 1px solid black;
     padding-bottom: 1.5rem;
     gap: 1rem;
-    position: relative; /* Zorg dat inhoud boven de achtergrond blijft */
-    z-index: 1; /* Voorgrondlaag */
-    background: rgba(255, 255, 255, 0.9); /* Witte achtergrond met lichte transparantie */
-    border-radius: 10px; /* Ronde hoeken */
-    padding: 1rem; /* Binnenruimte rondom artikelen */
+    position: relative; 
+    z-index: 1; 
+    background: rgba(255, 255, 255, 0.9); 
+    border-radius: 10px; 
+    padding: 1rem; 
 }
 
 /* Header binnen een artikel */
@@ -330,60 +307,49 @@ nav.alles ul li a:hover {
 }
 
 /* Afbeelding en onderschrift */
-/* figure {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}  */
-
 figure.slide-article {
-    margin: 0 auto; /* Zorg dat het element gecentreerd is */
+    margin: 0 auto; 
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    max-width: 60%; /* Beperkt de breedte tot 80% van de container */
-    align-items: center; /* Centreert inhoud binnen het figure-element */
+    max-width: 60%; 
+    align-items: center; 
+
+    @media (min-width: 1024px) and (max-width: 1940px) {
+        max-width: 30%; 
+    }
+
+    @media (max-width: 768px) {
+        max-width: 90%; 
+        gap: 0.3rem; 
+    }
 }
 
 /* Styling voor de afbeelding */
 figure.slide-article img {
-    max-width: 100%; /* Zorg dat de afbeelding niet breder wordt dan zijn container */
-    height: auto; /* Behoudt de oorspronkelijke verhoudingen */
-    border-radius: 5px; /* Optioneel: ronde hoeken */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Optioneel: subtiele schaduw */
-}
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 
-/* Media queries voor laptops */
-@media (min-width: 1024px) and (max-width: 1940px) {
-    figure.slide-article {
-        max-width: 30%; /* Maak de breedte compacter op laptops */
+    @media (min-width: 1024px) and (max-width: 1940px) {
+        border-radius: 4px; 
     }
 
-    figure.slide-article img {
-        max-width: 100%; /* Zorg dat de afbeelding zich aanpast binnen deze container */
-        border-radius: 4px; /* Optioneel: iets minder afgeronde hoeken */
+    @media (max-width: 768px) {
+        border-radius: 3px; 
     }
 }
-
-/* Media queries voor kleinere schermen */
-@media (max-width: 768px) {
-    figure.slide-article {
-        max-width: 90%; /* Breder op kleinere schermen */
-        gap: 0.3rem; /* Verminder ruimte tussen elementen */
-    }
-
-    figure.slide-article img {
-        border-radius: 3px; /* Kleinere ronde hoeken op mobiel */
-    }
-}
-
 
 figure img {
     width: 100%;
     height: auto;
     border-radius: 5px;
     border: 1px solid #ddd;
+
+    @media (max-width: 768px) {
+        border-radius: 3px; 
+    }
 }
 
 figcaption {
@@ -405,6 +371,11 @@ figcaption {
     display: inline-block;
     transition: background-color 0.3s ease, transform 0.2s ease;
     border-radius: 5px;
+
+    @media (max-width: 768px) {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem; 
+    }
 }
 
 .artikel-button:hover {
@@ -413,33 +384,35 @@ figcaption {
     cursor: pointer;
 }
 
-/* Responsiviteit */
-@media (max-width: 768px) {
-    .artikel-sectie {
-        grid-template-columns: 1fr; /* Eén kolom op kleine schermen */
+/* Artikel sectie */
+.artikel-sectie {
+    grid-template-columns: repeat(2, 1fr); 
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr; 
     }
 }
 
 .donatie svg {
-    width: 100%; /* SVG vult standaard de container */
-    height: auto; /* Behoudt de aspectratio */
-    display: block; /* Voorkomt witruimte */
-    margin: 0 auto; /* Centreert de SVG */
-    min-width: 300px; /* Minimale breedte voor mobiele apparaten */
+    width: 100%;
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    min-width: 300px; 
 }
 
 /* Aanpassingen voor tablets en grotere schermen */
 @media (min-width: 768px) {
     .donatie svg {
-        max-width: 900px; /* Beperkt de breedte op tablets */
-        margin: 0 auto; /* Centreert de SVG */
+        max-width: 900px; 
+        margin: 0 auto; 
     }
 }
 
 @media (min-width: 1200px) {
     .donatie svg {
-        max-width: 300px; /* Beperkt de breedte op grote desktops */
-        margin: 0 auto; /* Zorgt dat het gecentreerd blijft */
+        max-width: 300px; 
+        margin: 0 auto; 
     }
 }
 
@@ -447,22 +420,21 @@ figcaption {
 
 /* Algemene styling voor de schrijvers-sectie */
 .schrijvers {
-    display: flex; /* Flexbox om inhoud te centreren */
-    justify-content: center; /* Horizontaal centreren */
-    align-items: center; /* Verticaal centreren */
-    padding: 2rem; /* Optionele padding rondom */
-    background-color: #ffffff; /* Optioneel: achtergrondkleur om contrast te bieden */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    padding: 2rem; 
+    background-color: #ffffff; 
 }
 
 /* SVG styling */
 .schrijvers svg {
-    max-width: 100%; /* Zorg dat de SVG niet breder wordt dan het scherm */
-    max-height: 100%; /* Zorg dat de SVG proportioneel blijft */
-    width: auto; /* Laat de breedte automatisch aanpassen */
-    height: auto; /* Laat de hoogte automatisch aanpassen */
-    display: block; /* Verwijder eventuele inline margins */
+    max-width: 100%; 
+    max-height: 100%; 
+    width: auto; 
+    height: auto;
+    display: block; 
 }
-
 
 /* Algemene styling voor de footer */
 .site-footer {
@@ -478,6 +450,11 @@ figcaption {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
     margin-bottom: 1.5rem;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr; 
+        text-align: center;
+    }
 }
 
 /* Secties in de footer */
@@ -502,16 +479,20 @@ figcaption {
     color: #000000;
     text-decoration: none;
     transition: color 0.3s ease;
-}
 
-.site-footer section ul li a:hover {
-    color: #ff6f50;
+    &:hover {
+        color: #ff6f50;
+    }
 }
 
 /* Social media links */
 .footer-social ul {
     display: flex;
     gap: 1rem;
+
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
 }
 
 .footer-social ul li img {
@@ -527,14 +508,5 @@ figcaption {
     font-size: 0.8rem;
 }
 
-/* Responsiviteit */
-@media (max-width: 768px) {
-    .footer-container {
-        grid-template-columns: 1fr; /* Eén kolom op kleine schermen */
-        text-align: center;
-    }
 
-    .footer-social ul {
-        justify-content: center;
-    }
-}
+
