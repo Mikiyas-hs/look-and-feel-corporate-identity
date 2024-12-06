@@ -1,16 +1,12 @@
 
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0; 
+    padding: 0; 
     font-family: Arial, sans-serif;
     line-height: 1.6;
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh; 
-
-    @media (max-width: 768px) {
-        font-size: 0.9rem;
-    }
 }
 
 /* Hero sectie */
@@ -25,10 +21,6 @@ body {
     justify-items: center;
     height: 70vh; 
 
-    @media (max-width: 768px) {
-        height: 60vh; 
-    }
-
     @media (min-width: 1024px) {
         height: 80vh; 
     }
@@ -38,10 +30,6 @@ body {
 .logo {
     grid-row: 2; 
     margin-bottom: 15em;
-
-    @media (max-width: 768px) {
-        width: 120px;
-    }
 
     @media (min-width: 1024px) {
         width: 150px;
@@ -57,12 +45,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     width: 2rem;
-    height: 1.5rem;
-
-    @media (max-width: 768px) {
-        width: 1.5rem;
-        height: 1.2rem;
-    }
+    height: 1.5rem; 
 }
 
 .menu-button span {
@@ -76,17 +59,6 @@ body {
 .hoofdtekst {
     grid-row: 3; 
     text-align: center;
-    font-size: 2.5rem;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-
-    @media (max-width: 768px) {
-        font-size: 1.8rem;
-    }
-
-    @media (min-width: 1024px) {
-        font-size: 3rem;
-    }
 }
 
 /* Artikelen-sectie */
@@ -95,14 +67,7 @@ body {
     padding: 2em;
     position: relative;
 
-    @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-        gap: 1em; 
-    }
-
-    @media (min-width: 1024px) {
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 2em; 
+    @media (min-width: 1020px) {
         max-width: 100%;
     }
 }
@@ -110,40 +75,32 @@ body {
 /* Header met titel en actiebutton */
 .action-header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* border-bottom: 1.5px solid #000; */
+    align-items: center; 
+    justify-content: space-between; 
     padding-bottom: 0.5em;
-    margin-left: -1.5em;
+    margin-left: -1.5em; 
     gap: 1em;
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 }
 
+/*class: heading_article geeft niet de grote die ik wil handhaven 
+vandaar de classnaam van de header*/
 .action-header h2 {
-    font-size: 2rem;
+    font-size: 2rem; 
     border-bottom: 1.5px solid #000;
-    font-weight: 600;
+    font-weight: 600; 
     margin: 0;
     padding-bottom: 0.2em;
     color: #000;
     line-height: 1.4;
     display: inline-block;
-
-    @media (max-width: 768px) {
-        font-size: 1.5rem;
-    }
 }
 
 /* Button */
 .button {
     background-color: #FF6F50; 
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 40px; 
+    height: 40px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,158 +109,6 @@ body {
     font-size: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.2s ease;
-
-    @media (max-width: 768px) {
-        width: 35px;
-        height: 35px;
-    }
-}
-
-/* Individuele artikelen */
-.artikelen img {
-    width: 100%; 
-    height: auto; 
-    border-radius: 5px;
-    margin-bottom: 1em;
-
-    @media (max-width: 768px) {
-        border-radius: 3px;
-    }
-}
-
-/* Pagination */
-.pagination {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    gap: 0.5em; 
-    margin-top: 1em; 
-
-    @media (max-width: 768px) {
-        gap: 0.3em; 
-    }
-}
-
-.pagination button {
-    width: 10px;
-    height: 10px;
-    background: #ccc;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    @media (max-width: 768px) {
-        width: 8px;
-        height: 8px; 
-    }
-}
-
-.pagination .dot.active {
-    background: #333; 
-}
-
-/* Basis styling voor de slide-article */
-.slide-article {
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto; 
-
-    @media (min-width: 1600px) {
-        max-width: 80%;
-    }
-
-    @media (max-width: 768px) {
-        max-width: 90%;
-        gap: 0.3rem;
-    }
-}
-
-
-/* Algemene instellingen voor de nav-bar */
-nav.alles {
-    background-color: #000000; 
-    padding: 0.5rem 0; 
-    display: flex;
-    justify-content: center;
-}
-
-nav.alles ul {
-    list-style: none; 
-    display: flex;
-    gap: 2rem; 
-    margin: 0;
-    padding: 0;
-}
-
-nav.alles ul li {
-    display: inline-block;
-}
-
-nav.alles ul li a {
-    text-decoration: none; 
-    color: white; 
-    font-size: 1rem; 
-    font-weight: normal;
-    font-family: Arial, sans-serif;
-    transition: color 0.3s ease; 
-}
-
-nav.alles ul li a:hover {
-    color: gray; 
-}
-
-/* Algemene styling voor de sectie */
-.artikel-sectie {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 2rem; 
-    padding: 2rem; 
-    background-image: url('Assets/background.svg'); 
-    background-repeat: no-repeat; 
-    background-position: center; 
-    background-size: cover;
-    position: relative; 
-    z-index: 0; 
-}
-
-/* Individuele artikelen */
-.artikel {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    border-bottom: 1px solid black;
-    padding-bottom: 1.5rem;
-    gap: 1rem;
-    position: relative; 
-    z-index: 1; 
-    background: rgba(255, 255, 255, 0.9); 
-    border-radius: 10px; 
-    padding: 1rem; 
-}
-
-/* Header binnen een artikel */
-.artikel-header {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-/* Titel van de categorie */
-.categorie-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
-    background-color: black;
-    display: inline-block;
-    padding: 0.3rem 1rem;
-}
-
-/* Beschrijvende tekst */
-.categorie-tekst {
-    font-size: 1rem;
-    font-style: italic;
-    margin: 0;
 }
 
 /* Afbeelding en onderschrift */
@@ -315,14 +120,27 @@ figure.slide-article {
     max-width: 60%; 
     align-items: center; 
 
-    @media (min-width: 1024px) and (max-width: 1940px) {
+    @media (min-width: 768px) {
         max-width: 30%; 
-    }
+    } 
+}
 
-    @media (max-width: 768px) {
-        max-width: 90%; 
-        gap: 0.3rem; 
-    }
+.slide-article {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto; 
+
+
+}
+
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+
+
 }
 
 /* Styling voor de afbeelding */
@@ -332,39 +150,144 @@ figure.slide-article img {
     border-radius: 5px; 
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 
-    @media (min-width: 1024px) and (max-width: 1940px) {
-        border-radius: 4px; 
-    }
 
-    @media (max-width: 768px) {
-        border-radius: 3px; 
-    }
 }
 
-figure img {
-    width: 100%;
-    height: auto;
+/* Individuele artikelen kijk of je dit element nodig hebt
+alleen margin-bottom kan hierbij nuttig zijn */ 
+.artikelen img {
+    width: 100%; 
+    height: auto; 
     border-radius: 5px;
-    border: 1px solid #ddd;
+    margin-bottom: 1em;
 
-    @media (max-width: 768px) {
-        border-radius: 3px; 
+
+}
+
+/* dots */
+.dots {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 0.5em; 
+    margin-top: 1em; 
+
+}
+
+.dots button {
+    width: 10px; 
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    border: none; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.dots .dot.active {
+    background: #333; 
+}
+
+
+nav.onderwerpen {
+    background-color: #000000; 
+    padding: 0.5rem 0; 
+    display: flex;
+    justify-content: center;
+}
+
+nav.onderwerpen ul {
+    list-style: none; 
+    display: flex;
+    gap: 2rem; 
+    margin: 0;
+    padding: 0;
+}
+
+/*weghalen*/
+nav.onderwerpen ul li {
+    display: inline-block;
+}
+
+nav.onderwerpen ul li a {
+    text-decoration: none; 
+    color: white; 
+    font-size: 1rem; 
+    font-weight: normal;
+    font-family: Arial, sans-serif;
+    transition: color 0.3s ease; 
+}
+
+nav.onderwerpen ul li a:hover {
+    color: gray; 
+}
+
+
+.artikel-sectie {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 2rem; 
+    padding: 2rem; 
+    background-image: url('Assets/background.svg'); 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover; 
+    position: relative; 
+    z-index: 0; 
+    
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
-figcaption {
-    font-size: 0.9rem;
-    color: #000;
+
+
+/* Individuele artikelen */
+.artikel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom: 1px solid black;
+    gap: 1rem;
+    position: relative; 
+    z-index: 1; 
+    background: rgba(255, 255, 255, 0.9); 
+    border-radius: 10px; 
+    padding: 1rem; 
+}
+
+
+.artikel-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Titel van de categorie */
+.categorie-title {
+    font-size: 1.2rem;
+    font-weight: bold; 
+    color: white;
+    background-color: black;
+    display: inline-block; 
+    padding: 0.3rem 1rem;
+}
+
+/* Beschrijvende tekst */
+.categorie-tekst {
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0;
 }
 
 /* Buttons */
 .artikel-button {
     margin-top: 1rem;
-    padding: 0.3rem 0.6rem;
-    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem; 
+    font-size: 0.8rem; 
     color: #fff;
     background-color: #E85340;
-    border: none;
+    border: none; 
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
@@ -372,48 +295,13 @@ figcaption {
     transition: background-color 0.3s ease, transform 0.2s ease;
     border-radius: 5px;
 
-    @media (max-width: 768px) {
-        font-size: 0.7rem;
-        padding: 0.2rem 0.5rem; 
-    }
+
 }
 
 .artikel-button:hover {
     background-color: #c44233;
     transform: translateY(-3px);
     cursor: pointer;
-}
-
-/* Artikel sectie */
-.artikel-sectie {
-    grid-template-columns: repeat(2, 1fr); 
-
-    @media (max-width: 768px) {
-        grid-template-columns: 1fr; 
-    }
-}
-
-.donatie svg {
-    width: 100%;
-    height: auto; 
-    display: block; 
-    margin: 0 auto; 
-    min-width: 300px; 
-}
-
-/* Aanpassingen voor tablets en grotere schermen */
-@media (min-width: 768px) {
-    .donatie svg {
-        max-width: 900px; 
-        margin: 0 auto; 
-    }
-}
-
-@media (min-width: 1200px) {
-    .donatie svg {
-        max-width: 300px; 
-        margin: 0 auto; 
-    }
 }
 
 
@@ -436,9 +324,30 @@ figcaption {
     display: block; 
 }
 
+
+.donatie svg {
+    width: 100%;
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    min-width: 300px;
+    max-width: 100%; 
+
+/* Aanpassingen voor tablets en grotere schermen */
+@media (min-width: 768px) {
+    max-width: 900px; 
+    margin: 0 auto; /*weghalen*/
+    }
+
+@media (min-width: 1200px) {
+        max-width: 700px; 
+        margin: 0 auto; /*weghalen*/
+    }
+}
+
+
 /* Algemene styling voor de footer */
-.site-footer {
-    background-color: #ffffff;
+.site-footer { 
     color: #000000;
     padding: 2rem;
     font-size: 0.9rem;
@@ -451,10 +360,7 @@ figcaption {
     gap: 1.5rem;
     margin-bottom: 1.5rem;
 
-    @media (max-width: 768px) {
-        grid-template-columns: 1fr; 
-        text-align: center;
-    }
+
 }
 
 /* Secties in de footer */
@@ -490,10 +396,8 @@ figcaption {
     display: flex;
     gap: 1rem;
 
-    @media (max-width: 768px) {
-        justify-content: center;
-    }
-}
+
+} 
 
 .footer-social ul li img {
     width: 24px;
